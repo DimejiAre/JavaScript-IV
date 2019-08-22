@@ -36,6 +36,7 @@ let gabe = new Instructor({
 });
 
 console.log(gabe);
+gabe.speak();
 gabe.demo('javascript');
 gabe.grade({name: 'Isaac'}, 'javascript');
 
@@ -49,6 +50,7 @@ let josh = new Instructor({
 });
 
 console.log(josh);
+josh.speak();
 josh.demo('python');
 josh.grade({name: 'Peter'}, 'python');
 
@@ -81,6 +83,7 @@ let melqui = new Student({
 })
 
 console.log(melqui);
+melqui.speak();
 melqui.listsSubjects();
 melqui.PRAssignment('CSS');
 melqui.sprintChallenge('CSS');
@@ -96,6 +99,7 @@ let austin = new Student({
 })
 
 console.log(austin);
+austin.speak();
 austin.listsSubjects();
 austin.PRAssignment('CSS');
 austin.sprintChallenge('CSS');
@@ -127,11 +131,12 @@ let jose = new ProjectManager({
 })
 
 console.log(jose);
+jose.speak();
 jose.standUp('webeu3_josemaria');
 jose.debugsCode({name: 'Dimeji'}, 'CSS');
 
 let tobi = new ProjectManager({
-    name: 'tobi',
+    name: 'Tobi',
     age: '35',
     location: 'Lagos',
     speciality: 'Front-end',
@@ -142,5 +147,6 @@ let tobi = new ProjectManager({
 })
 
 console.log(tobi);
+tobi.speak();
 tobi.standUp('webeu3_tobi');
 tobi.debugsCode({name: 'Megan'}, 'HTML');
