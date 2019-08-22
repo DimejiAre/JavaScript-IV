@@ -7,7 +7,7 @@ class Person {
         this.location = data.location;
     }
     speak() {
-        return `Hello my name is ${this.name}, I am from ${this.location}`;
+        console.log(`Hello my name is ${this.name}, I am from ${this.location}`);
     }
 }
 
@@ -19,10 +19,10 @@ class Instructor extends Person{
         this.catchPhrase = data.catchPhrase;
     }
     demo(subject) {
-        return `Today we are learning about ${subject}`;
+        console.log(`Today we are learning about ${subject}`);
     }
     grade(student, subject) {
-        return `${student.name} receives a perfect score on ${subject}`
+        console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 }
 
@@ -36,8 +36,8 @@ let gabe = new Instructor({
 });
 
 console.log(gabe);
-console.log(gabe.demo('javascript'));
-console.log(gabe.grade({name: 'Isaac'}, 'javascript'));
+gabe.demo('javascript');
+gabe.grade({name: 'Isaac'}, 'javascript');
 
 let josh = new Instructor({
     name: 'Josh',
@@ -49,8 +49,8 @@ let josh = new Instructor({
 });
 
 console.log(josh);
-console.log(josh.demo('python'));
-console.log(josh.grade({name: 'Peter'}, 'python'));
+josh.demo('python');
+josh.grade({name: 'Peter'}, 'python');
 
 
 class Student extends Person{
