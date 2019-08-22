@@ -51,3 +51,51 @@ let josh = new Instructor({
 console.log(josh);
 console.log(josh.demo('python'));
 console.log(josh.grade({name: 'Peter'}, 'python'));
+
+
+class Student extends Person{
+    constructor(data){
+        super(data);
+        this.previousBackground = data.previousBackground;
+        this.className = data.className;
+        this.favSubjects = data.favSubjects;
+    }
+    listsSubjects(){
+        this.favSubjects.forEach(subject=>console.log(subject));
+    }
+    PRAssignment(subject){
+        console.log(`${this.name} has submitted a PR for ${subject}`)
+    }
+    sprintChallenge(subject){
+        console.log(`${this.name} has begun sprint challenge on ${subject}`)
+    }
+}
+
+let melqui = new Student({
+    name: 'Melqui',
+    age: '21',
+    location: 'Portugal',
+    previousBackground: 'Junior web developer',
+    className: 'WEBEU3',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
+})
+
+console.log(melqui);
+melqui.listsSubjects();
+melqui.PRAssignment('CSS');
+melqui.sprintChallenge('CSS');
+
+
+let austin = new Student({
+    name: 'Austin',
+    age: '32',
+    location: 'Kenya',
+    previousBackground: 'Footballer',
+    className: 'WEBEU3',
+    favSubjects: ['Node.js', 'React'],
+})
+
+console.log(austin);
+austin.listsSubjects();
+austin.PRAssignment('CSS');
+austin.sprintChallenge('CSS');
