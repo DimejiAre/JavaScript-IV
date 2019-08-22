@@ -99,3 +99,48 @@ console.log(austin);
 austin.listsSubjects();
 austin.PRAssignment('CSS');
 austin.sprintChallenge('CSS');
+
+
+class ProjectManager extends Instructor{
+    constructor(data){
+        super(data);
+        this.gradClassName = data.gradClassName;
+        this.favInstructor = data.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel standup time!​​​​​`);
+    }
+    debugsCode(student,subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+    }
+}
+
+let jose = new ProjectManager({
+    name: 'Jose',
+    age: '32',
+    location: 'Lagos',
+    speciality: 'Back-end',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Hope we are recharged!!',
+    gradClassName: 'WEBEU2',
+    favInstructor: 'Sean',
+})
+
+console.log(jose);
+jose.standUp('webeu3_josemaria');
+jose.debugsCode({name: 'Dimeji'}, 'CSS');
+
+let tobi = new ProjectManager({
+    name: 'tobi',
+    age: '35',
+    location: 'Lagos',
+    speciality: 'Front-end',
+    favLanguage: 'CSS',
+    catchPhrase: 'Beautiful!!!',
+    gradClassName: 'WEBEU2',
+    favInstructor: 'Gabe',
+})
+
+console.log(tobi);
+tobi.standUp('webeu3_tobi');
+tobi.debugsCode({name: 'Megan'}, 'HTML');
