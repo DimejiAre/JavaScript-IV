@@ -1,5 +1,6 @@
 // CODE here for your Lambda Classes
 
+//Create Person Class
 class Person {
     constructor(data) {
         this.name = data.name;
@@ -11,6 +12,8 @@ class Person {
     }
 }
 
+
+//Create Instructor Class
 class Instructor extends Person {
     constructor(data) {
         super(data);
@@ -37,6 +40,7 @@ class Instructor extends Person {
     }
 }
 
+//Create Instructor Objects with Tests
 let gabe = new Instructor({
     name: 'Gabe',
     age: '42',
@@ -66,6 +70,7 @@ josh.demo('python');
 josh.grade({ name: 'Peter' }, 'python');
 
 
+//Create Student Class
 class Student extends Person {
     constructor(data) {
         super(data);
@@ -92,6 +97,8 @@ class Student extends Person {
     }
 }
 
+
+//Create Student Objects with Tests
 let melqui = new Student({
     name: 'Melqui',
     age: '21',
@@ -124,6 +131,7 @@ austin.PRAssignment('CSS');
 austin.sprintChallenge('CSS');
 
 
+//Create Project Manager Class
 class ProjectManager extends Instructor {
     constructor(data) {
         super(data);
@@ -138,6 +146,8 @@ class ProjectManager extends Instructor {
     }
 }
 
+
+//Create Project Manager Objects with Tests
 let jose = new ProjectManager({
     name: 'Jose',
     age: '32',
